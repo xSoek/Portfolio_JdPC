@@ -1,0 +1,112 @@
+#navbar-main-container {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  height: 50px;
+  top: 0;
+  justify-content: space-around;
+  background-color: rgba(9, 11, 27, 0.9);
+  z-index: 99;
+}
+#navbar-menu-container a:hover {
+  color: rgb(170, 170, 170);
+}
+#navbar-menu-container {
+  width: 50%;
+  display: flex;
+  justify-self: right;
+  justify-content: space-between;
+}
+
+#navbar-menu-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#navbar-links-container {
+  width: 10%;
+  margin-top: 1%;
+  display: flex;
+  justify-self: right;
+  justify-content: space-evenly;
+}
+
+.social-icon-container {
+  position: relative;
+  margin-top: 15%;
+  width: 50px;
+  height: 50px;
+}
+
+.social-background {
+  background-color: rgba(189, 189, 189, 0.301);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.25s linear;
+  top: -15%;
+  left: -15%;
+  transform: scale(0);
+  z-index: -1;
+  transform-origin: center center;
+}
+
+.social-icons:hover {
+  cursor: pointer;
+}
+.social-icons:hover + .social-background {
+  transform: scale(1);
+}
+
+@media (max-width: 1024px) {
+  #minor-navbar {
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    width: fit-content;
+    right: -220px;
+    top: 1%;
+    transition: right 0.5s linear;
+  }
+  #menuIcon {
+    transform: rotate(180deg);
+  }
+  #menuIcon:hover {
+    cursor: pointer;
+  }
+
+  #navbar-main-container-min {
+    padding: 7px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(9, 18, 39, 0.99);
+  }
+  #navbar-menu-container-min {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar-menu-container-min a {
+    margin: 5% 0%;
+  }
+
+  #navbar-links-container-min {
+    width: 100%;
+    display: flex;
+    justify-self: right;
+    justify-content: space-evenly;
+  }
+
+  #navbar-menu-container-min a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+  }
+}

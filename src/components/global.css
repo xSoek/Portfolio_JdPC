@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+* {
+  font-family: "Oxygen", sans-serif;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 50%,
+    rgb(0, 183, 255) 100%
+  );
+  border-radius: 10px;
+  background-size: auto 200%;
+
+  animation: scrollBackground 2s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0%,
+  100% {
+    background-position: bottom;
+  }
+
+  50% {
+    background-position: top;
+  }
+}
+
+body {
+  background-color: rgb(9, 11, 27);
+  width: 99vw;
+  max-width: 100%;
+}
+
+.text {
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.section-title-container {
+  margin-left: 2%;
+  width: fit-content;
+}
+.section-title {
+  font-size: 60px;
+  margin: 0;
+  width: 100%;
+}
+.custom-button-1 {
+  margin: 5%;
+  padding: 2%;
+  width: 175px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(
+    to right,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 51%,
+    rgb(0, 183, 255) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    to right,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 51%,
+    rgb(0, 183, 255) 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 51%,
+    rgb(0, 183, 255) 100%
+  );
+  background-size: 200% auto;
+  transition: 1s;
+  border: none;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fffc",endColorstr="#db47ff",GradientType=1);
+}
+
+.custom-button-1:hover {
+  cursor: pointer;
+  border: none;
+  background-position: right center;
+}
+
+.custom-button-2 {
+  margin: 5%;
+  padding: 2%;
+  width: 175px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(
+    to right,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 51%,
+    rgb(0, 183, 255) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    to right,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 51%,
+    rgb(0, 183, 255) 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 183, 255) 0%,
+    rgba(219, 71, 255, 1) 51%,
+    rgb(0, 183, 255) 100%
+  );
+  background-size: 200% auto;
+  background-position: right;
+  transition: 1s;
+  border: none;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fffc",endColorstr="#db47ff",GradientType=1);
+}
+
+.custom-button-2:hover {
+  cursor: pointer;
+  border: none;
+  background-position: left center;
+}

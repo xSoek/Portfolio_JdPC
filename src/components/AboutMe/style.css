@@ -1,0 +1,15 @@
+#aboutme {
+  padding-top: 5%;
+  margin-top: 10%;
+}
+
+#aboutme h3 {
+  margin-left: 2%;
+  color: rgb(163, 163, 163);
+  transition: 0.5s;
+}
+
+#aboutme h3:hover {
+  cursor: default;
+  color: rgb(116, 207, 243);
+}
