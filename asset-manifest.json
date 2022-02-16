@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.dab2e5cb.chunk.css",
+    "main.js": "/portfolio/static/js/main.3c5a0472.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.3c5a0472.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.5aeea44b.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.5aeea44b.js.map",
+    "static/js/2.b0d4bcc8.chunk.js": "/portfolio/static/js/2.b0d4bcc8.chunk.js",
+    "static/js/2.b0d4bcc8.chunk.js.map": "/portfolio/static/js/2.b0d4bcc8.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.dab2e5cb.chunk.css.map": "/portfolio/static/css/main.dab2e5cb.chunk.css.map",
+    "static/js/2.b0d4bcc8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b0d4bcc8.chunk.js.LICENSE.txt",
+    "static/media/database_icon.1fb98c6e.png": "/portfolio/static/media/database_icon.1fb98c6e.png",
+    "static/media/frozenham.6b1b8656.png": "/portfolio/static/media/frozenham.6b1b8656.png",
+    "static/media/github.d355cf97.png": "/portfolio/static/media/github.d355cf97.png",
+    "static/media/linkedin.b4928b9a.png": "/portfolio/static/media/linkedin.b4928b9a.png",
+    "static/media/maxvalley.e81ad500.png": "/portfolio/static/media/maxvalley.e81ad500.png",
+    "static/media/movie-searcher.8779cf9d.png": "/portfolio/static/media/movie-searcher.8779cf9d.png",
+    "static/media/prog_lang_icon.d11493d2.png": "/portfolio/static/media/prog_lang_icon.d11493d2.png",
+    "static/media/to-do-list.47b8f1c7.png": "/portfolio/static/media/to-do-list.47b8f1c7.png",
+    "static/media/ui_icon.c80ad875.png": "/portfolio/static/media/ui_icon.c80ad875.png",
+    "static/media/utad.9bcec672.png": "/portfolio/static/media/utad.9bcec672.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5aeea44b.js",
+    "static/js/2.b0d4bcc8.chunk.js",
+    "static/css/main.dab2e5cb.chunk.css",
+    "static/js/main.3c5a0472.chunk.js"
+  ]
+}
