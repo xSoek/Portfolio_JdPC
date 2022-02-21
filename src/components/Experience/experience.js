@@ -42,6 +42,7 @@ const Experience = () => {
                 </div>
                 <div className="more-to-come"> and this is only the beginning... </div>
             </div>
+            
             <div className="experience-description-container">
                 <div key={Experience_List[currentIndex].KeyID} className="experience-description" >
                     <div className="experience-title">
@@ -60,8 +61,7 @@ const Experience = () => {
                         })
                     }
                 </div>
-            </div>
-
+            </div>           
         </div>
     )
 }

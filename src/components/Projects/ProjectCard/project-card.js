@@ -1,10 +1,14 @@
 import React from "react";
 import Tag from "./project-tag";
+import { Zoom } from "react-reveal";
 import "./style.css"
 
 const ProjectCard = (props) => {
     
     return (
+        <Zoom>
+
+
         <div className="project-card-main-container">
             <img src={props.project.Image} width="100%" alt="App Screenshot" />
             <h2>{props.project.Title}</h2>
@@ -32,6 +36,7 @@ const ProjectCard = (props) => {
 
             </div>
         </div>
+                </Zoom>
     ) 
 }
 

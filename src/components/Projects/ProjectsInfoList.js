@@ -12,14 +12,14 @@ export const ProjectsInfoList = [
         WebLink:"https://movie-searcher-demo.netlify.app/",
     },
     {
-        KeyID: "TDL",
-        Title: "To Do List",
+        KeyID: "TKI",
+        Title: "Tasks It",
         Description: "To do list application where you can create as much lists as you want to organize all your tasks, it has an intuitive interface, for easy use",
         WIP: "At home page show most relevant movies and current films in theaters",
         Tags: ["React", "Persistence"],
         Image: TDL,
         CodeLink:"https://github.com/xSoek/to-do-list",
-        WebLink:"",
+        WebLink:"https://tasksit.netlify.app/",
     },
     
 ]

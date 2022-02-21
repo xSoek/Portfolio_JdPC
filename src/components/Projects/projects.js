@@ -14,9 +14,11 @@ const Projects = () => {
                     Projects
                 </h1>
             </div>
+
             <h3 style={{marginLeft:"2%", marginBottom:"5%", color: "rgb(163, 163, 163)"}}>
                 Here I'll show you all my web apps I've developed since January 2022, this list will also increase over time so stay tuned so you don't miss any future updates
             </h3>
+        
             <div className="project-cards-wrapper">
                 {
                     ProjectsInfoList.map((project) => {
