@@ -8,7 +8,7 @@ export const Experience_List = [
         Title: "Certificate of Higher Education in Cross-Platform Application Development",
         Date: "September 2018 - June 2020",
         Description: "",
-        Technologies: ["FrontEnd: HTML, JavaScript, CSS, Bootstrap","BackEnd: PHP, MariaDB (MongoDB), MySQL, Node.js ",  "Others: Git, Java, Kotlin, Dart, Swift"],
+        Technologies: ["FrontEnd: HTML, JavaScript, CSS, Bootstrap", "BackEnd: PHP, MariaDB (MongoDB), MySQL, Node.js ", "Others: Git, Java, Kotlin, Dart, Swift"],
         Image: utad,
         ImageSize: [200, 100],
     },
@@ -39,7 +39,16 @@ export const Experience_List = [
         Image: frozenham,
         ImageSize: [100, 100],
     },
+    {
+        KeyID: "FWD",
+        Title: "Fullstack web developer",
+        Date: "May 2022 - July 2022",
+        Description: "3 months of constant and intense learning of all the technologies for the correct develop of a web page, including the Frontend, API, Databases, etc...",
+        Technologies: ["Frontend:  Angular, React, Typescript, Javascript, HTML, CSS", "Backend: NodeJs, Express, MySQL, MongoDB"],
+        Image: "https://www.anuarioguia.com/imagenes/logos/9812733841-168268.png",
+        ImageSize: [100, 100],
+    },
 
-    
+
 
 ]
