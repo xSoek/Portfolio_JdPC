@@ -3,5 +3,58 @@ section {
     padding: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgb(255, 198, 123);
+    background-color: #34335C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+p {
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.445);
+    padding: 10px;
+    display: flex;
+    overflow: hidden;
+    width: 95px; 
+    transition: .5s;
+    border-radius: 10px;
+}
+
+article>div{
+    position: relative;
+    min-width: 1400px;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+h3 {
+    cursor: default;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin-bottom: 0;
+    width: 100%;
+}
+
+article>div:hover {
+    color: rgb(255, 241, 180);
+}
+
+article img {
+    width: 75px;
+    height: 75px;
+}
+
+article:nth-child(2) {
+    margin: 20px 0;
+}
+
+.words {
+    margin-bottom: 30px;
 }
