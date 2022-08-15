@@ -3,7 +3,6 @@ section {
     padding: 0;
     width: 100vw;
     height: 100%;
-    background-color: #34335C;
     color: white;
     display: flex;
 }
@@ -31,7 +30,6 @@ section {
     position: relative;
     width: fit-content;
     height: fit-content;
-
     margin: auto auto;
 }
 
@@ -47,4 +45,35 @@ section {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@media (max-width: 1245px) {
+    .my-info {
+        width: 70%;
+    }
+    .my-icon {
+        margin: auto 0;
+    }
+    .my-icon img{
+        width: 300px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 960px) {
+    .my-info {
+        font-size: .70em;
+        width: 100%;
+        height: 50%;
+    }
+    .my-icon {
+       margin: 0 auto;
+    }
+    section {
+        flex-direction: column;
+    }
+
+
+
 }

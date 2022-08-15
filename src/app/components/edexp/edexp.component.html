@@ -1,3 +1,32 @@
-<section class="slide-4">
-    
+<section>
+    <div class="timeline-container">
+        <div class="timeline-wrap">
+            <div class="timeline"></div>
+        </div>
+
+        <span *ngFor="let a of experience; index as i" [ngStyle]="{'left': (i+ 0.75) * 90 / experience.length+'%'}"
+            class="marker" [id]="'marker-'+i" (mouseenter)="activateMarker($event)"></span>
+    </div>
+
+    <div class="timeline-info">
+        <h2 *ngIf="!currentExp?.id" class="d-flex h-100 justify-content-center align-items-center"> Hover the markers to
+            discover each one
+        </h2>
+
+        <div *ngIf="currentExp?.id">
+            <div class="edexp-info-header d-flex mb-5">
+                <img [src]=" currentExp?.type === 1 ?'../../../assets/icons/student.png':'../../../assets/icons/job.png'"
+                    alt="">
+                <div class="d-flex">
+                    <div class="w-100 edexp-info-main">
+                        <h2>{{currentExp?.title}}</h2>
+                        <h3>{{currentExp?.subtitle}}</h3>
+                    </div>
+                    <img [src]="currentExp?.image" alt="">
+                </div>
+            </div>
+            <p class="mb-5">{{currentExp?.description}}</p>
+            <h2 class="w-100 text-center">{{currentExp?.technologies}}</h2>
+        </div>
+    </div>
 </section>

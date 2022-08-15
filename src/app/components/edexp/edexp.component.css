@@ -3,5 +3,152 @@ section {
     padding: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgb(95, 86, 75);
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+section .timeline-container {
+    margin: 100px auto 30px auto;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-wrap {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.timeline {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(0% 0%, 95% 0%, 98% 50%, 95% 100%, 0% 100%, 2% 50%);
+
+}
+
+.marker {
+    position: absolute;
+    top: 0;
+    transform: translateY(-10px);
+    height: 80px;
+    width: 30px;
+    background-color: rgb(123, 125, 250);
+    box-shadow: -1px 1px 10px black;
+    cursor: pointer;
+}
+
+.active-marker{
+    background-color: antiquewhite;
+    animation: active-marker 2s infinite;
+}
+
+.timeline-info {
+    padding: 30px;
+    margin-top: 50px;
+    width: 100%;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: -1px 1px 20px black;
+}
+
+.timeline-info img{
+    filter: drop-shadow(2px 1px 4px #6363f0);
+    width: 100px;
+    height: auto
+}
+
+.timeline-info p {
+    font-size: 25px;    
+}
+
+.edexp-info-header {
+    justify-content: space-between;
+}
+
+h3, h2 {
+    text-align: end;
+    margin-right: 20px;
+}
+
+@keyframes active-marker {
+    0% {
+        background-color: rgb(123, 125, 250);
+    }
+    50% {
+        background-color: rgb(255, 255, 255);
+    }
+    100% {
+       background-color: rgb(123, 125, 250);
+    }
+}
+
+@media (max-width: 1030px) {
+    .edexp-info-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .timeline-info p {
+        font-size: x-large;
+    }
+
+    h3, h2 {
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 950px) {
+
+
+    .timeline-info p {
+        font-size: x-large;
+    }
+
+    h3, h2 {
+        font-weight: 700;
+        font-size: larger;
+        
+    }
+}
+
+@media (max-width: 865px) {
+
+    .edexp-info-header>div{
+        flex-direction: row-reverse;
+        
+    }
+
+    .timeline-info p {
+        font-size: x-large;
+    }
+
+    h3, h2 {
+        font-weight: 700;
+        font-size: larger;
+        text-align: start;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 670px) {
+
+    .timeline-info p {
+        font-size: large;
+    }
+
+    h3, h2 {
+        font-size: large;
+    }
+
+    .timeline-info img{
+        filter: drop-shadow(2px 1px 4px #6363f0);
+        width: 75px;
+        height: 75px;
+    }
 }

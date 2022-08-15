@@ -1,61 +1,96 @@
-import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { WhoIAmComponent } from './components/who-i-am/who-i-am.component';
+
+import * as AOS from "aos";
+import 'aos/dist/aos.css';
 
 @Component({
+  providers: [WhoIAmComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 
 
-export class AppComponent {
-  title = 'jorge_de_paz-portfolio';
+export class AppComponent implements OnInit {
 
+  tooltipText = ""
+
+  sectionTitle: string[] = [" ", "About me", "Projects", "Education & Experience"]
   currentSlide = 0;
 
-  constructor() {}
+  constructor(private comp: WhoIAmComponent) { }
 
-  onWheel(event: WheelEvent): void {
+  ngOnInit(): void {
+    AOS.init({});
 
-    let main = document.querySelector("main");
-    let div = document.querySelector("div");
-
-    console.log(div?.children);
-    
-    
-    if (main && main.scrollLeft % main.offsetWidth === 0) {
-   
-      if(div && this.currentSlide >= div.children.length-1) {
-        this.currentSlide = 0;
-        main.scrollLeft = main.offsetWidth * this.currentSlide
-        return;
+    let slides = document.querySelector("div.slides");
+    if (slides && this.currentSlide === 0) {
+      let buttonPrev = document.querySelector<HTMLElement>("button.btn-prev");
+      let button = document.querySelector<HTMLElement>("button.btn-next");
+      if (buttonPrev && button) {
+        buttonPrev.style.visibility = "hidden";
+        button.classList.add("index0")
       }
+    } else {
+      let button = document.querySelector<HTMLElement>("button.btn-prev");
+      if (button)
+        button.style.visibility = "visible";
+    }
+  }
 
-      if (event.deltaY > 0) {
-        
+
+  changeSlide(value: number) {
+
+
+    AOS.refreshHard();
+    let main = document.querySelector("main");
+    let slides = document.querySelector("div.slides");
+    if (main && main.scrollLeft % main.offsetWidth === 0) {
+      if (value > 0 && main.scrollLeft < main.offsetWidth * 3) {
         this.currentSlide++
-        console.log(this.currentSlide);
-        
         main.scrollLeft = main.offsetWidth * this.currentSlide
-        console.log(main.offsetWidth * this.currentSlide);
-      } else if(main.scrollLeft > 0) {
-        
+
+      } else {
         this.currentSlide--
         main.scrollLeft = main.offsetWidth * this.currentSlide
       }
-      
+
+
+      if (slides && slides.childNodes.length - 1 === this.currentSlide) {
+        let button = document.querySelector<HTMLElement>("button.btn-next");
+        if (button)
+          button.style.visibility = "hidden";
+      } else {
+        let button = document.querySelector<HTMLElement>("button.btn-next");
+        if (button)
+          button.style.visibility = "visible";
+      }
+
+      if (slides && this.currentSlide === 0) {
+        let buttonPrev = document.querySelector<HTMLElement>("button.btn-prev");
+        let button = document.querySelector<HTMLElement>("button.btn-next");
+        if (buttonPrev && button) {
+          buttonPrev.style.visibility = "hidden";
+          button.classList.add("index0")
+        }
+      } else {
+        let buttonPrev = document.querySelector<HTMLElement>("button.btn-prev");
+        let button = document.querySelector<HTMLElement>("button.btn-next");
+        if (buttonPrev && button) {
+          buttonPrev.style.visibility = "visible";
+          button.classList.remove("index0")
+        }
+      }
+
+
     }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event:any) {
-    let main = document.querySelector("main");
-      
-    if (main) {
-      main.style.scrollBehavior = "auto"
-      main.scrollLeft = 0;
-      main.style.scrollBehavior = "smooth"
-      main.scrollLeft+=main.offsetWidth * this.currentSlide
-    }
+  goToLink(link: string) {
+    window.open(link, "_blank");
   }
-
+  changeText(newText: string) {
+    this.tooltipText = newText
+  }
 }

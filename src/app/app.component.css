@@ -2,11 +2,107 @@ main {
     scroll-behavior: smooth;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
+}
+
+.slides {
+    background: rgb(132,130,255);
+    background: -moz-linear-gradient(90deg, rgba(132,130,255,1) 0%, rgba(48,47,116,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(132,130,255,1) 0%, rgba(48,47,116,1) 100%);
+    background: linear-gradient(90deg, rgba(132,130,255,1) 0%, rgba(48,47,116,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8482ff",endColorstr="#302f74",GradientType=1);
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    padding: 40px 110px 0px
+    50px;
+    color: white;
+    min-height: 86px;
+}
+
+header button {
+    transition: all .5s;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+}
+
+header button img {
+    width: 50px;
+}
+
+
+header button:hover {
+    transform: scale(1.1);
 }
 
 main>div {
     display: flex;
     height: 100%;
     width: fit-content;
+}
+
+.index0 {
+    animation: index0 1s linear infinite;
+}
+
+footer {
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 50px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+    padding: 5px 10px;
+}
+
+footer div { 
+    cursor: pointer;
+}
+
+footer div:hover img{ 
+    transform: scale(0.9);
+}
+
+.tooltip-contact {
+    top: -40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.842);
+    text-align: center;
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+
+}
+
+.hover-contact:hover ~ .tooltip-contact {
+    display: block;
+}
+
+@keyframes index0 {
+    0% { 
+        transform: scale(1.0);
+    }
+
+    50% { 
+        transform: scale(1.2);
+    }
+
+    100% { 
+        transform: scale(1.0);
+    }
+}
+
+@media (max-width: 575px) {
+
+    header {
+
+        padding: 40px 20px 0px
+        50px;
+
+    }
 }

@@ -1,3 +1,67 @@
-<section class="slide-3">
-    
+<section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        *ngIf="checkMediaQuery('max-width: 1100px')">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="col-6 d-flex justify-content-center project-card-container
+                        flex-column" id="project-card-container-sm">
+                <h3 class="text-center mb-3">{{currentProject.name}}</h3>
+                <div *ngIf="currentProject.id" class="project-card">
+                    <div class="image-card">
+                        <img [src]="currentProject.image" alt="">
+                    </div>
+                    <div>
+                        <p>{{currentProject.description}}</p>
+                        <div class="other-info row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <img class="technologies" *ngFor="let icon of currentProject.technologies" [src]="icon"
+                                    alt="">
+                            </div>
+                            <div class="navigation-buttons col-12">
+                                <button (click)="openPage(currentProject.codeLink)">Code</button>
+                                <button (click)="openPage(currentProject.webLink)">Navigate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="projects-container col-6 g-0">
+            <article *ngFor="let project of projects" (mouseenter)="setCurrentProject($event, project.id)"
+                class="project-target">
+                <div *ngIf="checkMediaQuery('max-width: 1100px')" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    class="w-100 h-100">
+                    <img [src]="project.icon" alt="">
+                </div>
+                <div *ngIf="!checkMediaQuery('max-width: 1100px')" class="w-100 h-100">
+                    <img [src]="project.icon" alt="">
+                </div>
+            </article>
+        </div>
+        <div class="col-6 d-flex justify-content-center project-card-container
+        flex-column" id="project-card-container-lg">
+            <h3 class="text-center mb-3">{{currentProject.name}}</h3>
+            <div *ngIf="currentProject.id" class="project-card">
+                <div class="image-card">
+                    <img [src]="currentProject.image" alt="">
+                </div>
+                <div>
+                    <p>{{currentProject.description}}</p>
+                    <div class="other-info row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <img class="technologies" *ngFor="let icon of currentProject.technologies" [src]="icon"
+                                alt="">
+                        </div>
+                        <div class="navigation-buttons col-12">
+                            <button (click)="openPage(currentProject.codeLink)">Code</button>
+                            <button (click)="openPage(currentProject.webLink)">Navigate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>

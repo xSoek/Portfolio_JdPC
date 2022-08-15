@@ -3,5 +3,157 @@ section {
     padding: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgb(201, 115, 4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px;
+}
+
+section>.row {
+    padding: 0;
+    width: 100%;
+    margin-top: 125px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 700px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0;
+}
+
+section .projects-container .project-target>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .projects-container img{
+    width: 100px;
+    height: auto;
+}
+
+section .project-card-container {
+    min-width: 500px;
+    width: 500px;
+    height: 700px;
+}
+
+section .project-card {
+    min-width: 500px;
+    width: 500px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px black;
+}
+
+section .project-card .image-card {
+    position: relative;
+}
+
+section .project-card .image-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: inset  0 -10px 30px -10px black;
+}
+
+section .project-card img{
+    width: 100%;
+    height: auto;
+}
+
+section .project-card .technologies{
+    width: auto;
+    height: 50px;
+    margin: 0 10px;
+}
+
+section .project-card p{
+    color: black;
+    padding: 20px;
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+section .project-card .other-info {
+    height: 160px;
+    padding: 0 20px;
+}
+
+section .project-card h3{
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+
+section .project-card .navigation-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    padding-top: 30px;
+
+}
+
+section .project-card .navigation-buttons button {
+    color: white;
+    width: 35%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(108, 106, 255);
+    transition: all .25s;
+    pointer-events: all;
+}
+
+
+section .project-card .navigation-buttons button:hover {
+    background-color: rgb(83, 82, 161);
+}
+
+article {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0px 5px 10px black;
+    transition: all .25s;
+}
+
+.active-project {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+article:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+@media (max-width: 1100px) {
+    .projects-container {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    #project-card-container-lg {
+        display: none !important;
+    }
+
 }
