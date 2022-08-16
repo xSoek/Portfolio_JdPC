@@ -33,7 +33,7 @@ export const EXPERIENCE = [
         id: "VGP",
         title: "Videogame Programmer",
         type: 2,
-        image: "../../../assets/media/frozenham.png",
+        image: "assets/media/frozenham.png",
         subtitle: "FrozenHam Studios, Madrid. Jan 2021 - Oct 2021",
         description: "As part of my Master's Dissertation we needed to found a videogame studio and also a videogame along with Art's Master & Design's Master, that's how FrozenHam Studios was born, and It's first game: Ronin-Hood Sisters in which I developed part of the Gameplay, UI and tools.",
         technologies: "C++, Unreal Engine, Jira",

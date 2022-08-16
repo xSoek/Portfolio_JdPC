@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   constructor(private comp: WhoIAmComponent) { }
 
   ngOnInit(): void {
-    AOS.init({});
+    AOS.init();
 
     let slides = document.querySelector("div.slides");
     if (slides && this.currentSlide === 0) {
@@ -42,8 +42,6 @@ export class AppComponent implements OnInit {
 
   changeSlide(value: number) {
 
-
-    AOS.refreshHard();
     let main = document.querySelector("main");
     let slides = document.querySelector("div.slides");
     if (main && main.scrollLeft % main.offsetWidth === 0) {
@@ -84,6 +82,16 @@ export class AppComponent implements OnInit {
       }
 
 
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    let main = document.querySelector("main");
+    let slides = document.querySelector("div.slides");
+    if (main) {
+
+      main.scrollLeft = main.offsetWidth * this.currentSlide
     }
   }
 

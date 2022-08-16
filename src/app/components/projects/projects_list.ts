@@ -2,8 +2,8 @@ export const PROJECTS = [
     {
         id: "MVS",
         name: "Movie Searcher",
-        image: "../../../assets/media/movie-searcher.png",
-        icon: "../../../assets/media/corny.png",
+        image: "assets/media/movie-searcher.png",
+        icon: "assets/media/corny.png",
         description: "Web application using IMDB as API where you can search for your favourite movies, see their overviews, vote counts, casting, similar movies and more!",
         technologies: [1, 4],
         codeLink: "https://github.com/xSoek/movie-searcher",
@@ -12,8 +12,8 @@ export const PROJECTS = [
     {
         id: "TKI",
         name: "Tasks It",
-        image: "../../../assets/media/tasks-it.png",
-        icon: "../../../assets/media/tasks-it_icon.png",
+        image: "assets/media/tasks-it.png",
+        icon: "assets/media/tasks-it_icon.png",
         description: "To do list app using localstorage as persitence where you can create as much lists as you want to organize your tasks, with an intuitive interface for a better usage",
         technologies: [1, 4],
         codeLink: "https://github.com/xSoek/to-do-list",
@@ -22,8 +22,8 @@ export const PROJECTS = [
     {
         id: "SPS",
         name: "Sport Share",
-        image: "../../../assets/media/sport-share.png",
-        icon: "../../../assets/media/sportshare_icon.png",
+        image: "assets/media/sport-share.png",
+        icon: "assets/media/sportshare_icon.png",
         description: "My first application gathering backend and frontend where you can post and share with everyone your sports events or even your favourite places to practice all kind of sports.",
         technologies: [2, 3, 4, 6],
         codeLink: "https://github.com/xSoek/APP_SportShare",
