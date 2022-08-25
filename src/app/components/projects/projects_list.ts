@@ -14,9 +14,9 @@ export const PROJECTS = [
         name: "Tasks It",
         image: "assets/media/tasks-it.png",
         icon: "assets/media/tasks-it_icon.png",
-        description: "To do list app using localstorage as persitence where you can create as much lists as you want to organize your tasks, with an intuitive interface for a better usage",
-        technologies: [1, 4],
-        codeLink: "https://github.com/xSoek/to-do-list",
+        description: "Drag & Drop To Do List using localstorage as persistence so whenever you want you can see your tasks, best app to see the workflow and start organizing your projects ",
+        technologies: [7, 6, 8, 5],
+        codeLink: "https://github.com/xSoek/TODOjs",
         webLink: "https://tasksit.netlify.app/",
     },
     {
