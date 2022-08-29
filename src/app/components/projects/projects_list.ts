@@ -1,5 +1,15 @@
 export const PROJECTS = [
     {
+        id: "SPS",
+        name: "Sport Share",
+        image: "assets/media/sport-share.png",
+        icon: "assets/media/sportshare_icon.png",
+        description: "My first application gathering backend and frontend where you can post and share with everyone your sports events or even your favourite places to practice all kind of sports.",
+        technologies: [2, 3, 4, 6],
+        codeLink: "https://github.com/xSoek/APP_SportShare",
+        webLink: "https://sportshare.netlify.app/",
+    },
+    {
         id: "MVS",
         name: "Movie Searcher",
         image: "assets/media/movie-searcher.png",
@@ -18,15 +28,5 @@ export const PROJECTS = [
         technologies: [7, 6, 8, 5],
         codeLink: "https://github.com/xSoek/TODOjs",
         webLink: "https://tasksit.netlify.app/",
-    },
-    {
-        id: "SPS",
-        name: "Sport Share",
-        image: "assets/media/sport-share.png",
-        icon: "assets/media/sportshare_icon.png",
-        description: "My first application gathering backend and frontend where you can post and share with everyone your sports events or even your favourite places to practice all kind of sports.",
-        technologies: [2, 3, 4, 6],
-        codeLink: "https://github.com/xSoek/APP_SportShare",
-        webLink: "https://sportshare.netlify.app/",
     },
 ]
